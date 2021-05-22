@@ -1,11 +1,15 @@
 import React from "react";
 import AboutPic from "../Images/about-pic.svg";
+import useWebAnimations, { lightSpeedInLeft } from "@wellyshen/use-web-animations";
+
 
 function About() {
+ const { ref } = useWebAnimations({...lightSpeedInLeft});
+
   return (
     <div id="container">
       <div id="content">
-        <h1 id="head1">
+        <h1 id="head1" ref={ref}>
           Welcome to about Page
           <br />
           <strong id="brandName">A.M Services</strong>
